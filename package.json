@@ -1,0 +1,27 @@
+{
+  "name": "proof-publisher-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small MCP server with an explicit, testable webhook publication boundary.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "ci": "npm run build && npm test",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
+
